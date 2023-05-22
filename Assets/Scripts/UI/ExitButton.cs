@@ -2,17 +2,16 @@
 
 public class ExitButton : MonoBehaviour
 {
-    [SerializeField]
-    tk2dButton button;
+    [SerializeField] private tk2dButton _exitButton;
 
     private void Start()
     {
-        button.ButtonPressedEvent += Button_ButtonPressedEvent;
+        _exitButton.ButtonPressedEvent += Button_ButtonPressedEvent;
     }
 
     private void OnDestroy()
     {
-        button.ButtonPressedEvent -= Button_ButtonPressedEvent;
+        _exitButton.ButtonPressedEvent -= Button_ButtonPressedEvent;
     }
 
     protected virtual void Button_ButtonPressedEvent(tk2dButton source)

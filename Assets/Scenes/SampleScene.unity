@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 52922204}
   - component: {fileID: 52922203}
   - component: {fileID: 52922202}
+  - component: {fileID: 52922206}
   m_Layer: 0
   m_Name: tk2dCamera
   m_TagString: Untagged
@@ -255,6 +256,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52922206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52922201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4849df2f9d850cd44877499ce3707705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
 --- !u!1 &147360914
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +281,7 @@ GameObject:
   - component: {fileID: 147360918}
   - component: {fileID: 147360917}
   - component: {fileID: 147360916}
+  - component: {fileID: 147360919}
   m_Layer: 0
   m_Name: Middle Decor
   m_TagString: Untagged
@@ -363,6 +378,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &147360919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147360914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1714eb2b66995844bd59b42e48d61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 52922205}
+  _parallaxStrength: 0.7
+  _disableVerticalParallax: 0
 --- !u!1 &373714764
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +405,7 @@ GameObject:
   - component: {fileID: 373714768}
   - component: {fileID: 373714767}
   - component: {fileID: 373714766}
+  - component: {fileID: 373714769}
   m_Layer: 0
   m_Name: Sky Background
   m_TagString: Untagged
@@ -471,6 +502,21 @@ MeshRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &373714769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373714764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1714eb2b66995844bd59b42e48d61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 52922205}
+  _parallaxStrength: 0.9
+  _disableVerticalParallax: 0
 --- !u!1 &1167868924
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +565,7 @@ GameObject:
   - component: {fileID: 1350561782}
   - component: {fileID: 1350561781}
   - component: {fileID: 1350561780}
+  - component: {fileID: 1350561783}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -615,6 +662,21 @@ MeshRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1350561783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350561778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1714eb2b66995844bd59b42e48d61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 52922205}
+  _parallaxStrength: 0.3
+  _disableVerticalParallax: 0
 --- !u!1 &1791368013
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +689,7 @@ GameObject:
   - component: {fileID: 1791368016}
   - component: {fileID: 1791368015}
   - component: {fileID: 1791368014}
+  - component: {fileID: 1791368018}
   m_Layer: 0
   m_Name: Background Decor
   m_TagString: Untagged
@@ -723,6 +786,21 @@ Transform:
   m_Father: {fileID: 1167868925}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791368018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791368013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1714eb2b66995844bd59b42e48d61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 52922205}
+  _parallaxStrength: 0.8
+  _disableVerticalParallax: 0
 --- !u!1 &2010895778
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +813,7 @@ GameObject:
   - component: {fileID: 2010895782}
   - component: {fileID: 2010895781}
   - component: {fileID: 2010895780}
+  - component: {fileID: 2010895783}
   m_Layer: 0
   m_Name: 'Foreground '
   m_TagString: Untagged
@@ -831,3 +910,18 @@ MeshRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2010895783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010895778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1714eb2b66995844bd59b42e48d61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followTarget: {fileID: 52922205}
+  _parallaxStrength: 0.5
+  _disableVerticalParallax: 0

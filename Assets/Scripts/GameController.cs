@@ -1,41 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField]
-    Window MainMenuWindow;
-    [SerializeField]
-    Window pauseWindow;
-    [SerializeField]
-    GameObject hudVisual;
+    [Header("UI")]
+    [SerializeField] private Window _mainMenuWindow;
+    [SerializeField] private Window _pauseWindow;
+    [SerializeField] private GameObject _hudVisual;
 
     private void Start()
     { 
         Time.timeScale = 0;
-        MainMenuWindow.Open();
-        MainMenuWindow.OnClose += StartGame;
-        pauseWindow.OnOpen += Pause;
-        pauseWindow.OnClose += UnPause;
+        _mainMenuWindow.Open();
+        _mainMenuWindow.OnClose += StartGame;
+        _pauseWindow.OnOpen += Pause;
+        _pauseWindow.OnClose += UnPause;
     }
 
     private void StartGame()
     {
-        MainMenuWindow.OnClose -= StartGame;
+        _mainMenuWindow.OnClose -= StartGame;
         Time.timeScale = 1;
-        hudVisual.SetActive(true);
+        _hudVisual.SetActive(true);
     }
 
     private void Pause()
     {
-        hudVisual.SetActive(false);
+        _hudVisual.SetActive(false);
         Time.timeScale = 0;
     }
 
     private void UnPause()
     {
         Time.timeScale = 1;
-        hudVisual.SetActive(true);
+        _hudVisual.SetActive(true);
     }
 }

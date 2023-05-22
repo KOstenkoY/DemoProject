@@ -2,12 +2,9 @@
 
 public class Window : MonoBehaviour
 {
-    [SerializeField]
-    GameObject visual;
-    [SerializeField]
-    tk2dButton buttonOpenWindow;
-    [SerializeField]
-    tk2dButton buttonCloseWindow;
+    [SerializeField] private GameObject _visual;
+    [SerializeField] private tk2dButton _buttonOpenWindow;
+    [SerializeField] private tk2dButton _buttonCloseWindow;
 
     public event System.Action OnOpen;
     public event System.Action OnClose;
@@ -15,18 +12,18 @@ public class Window : MonoBehaviour
 
     private void Start()
     {
-        if(buttonOpenWindow != null)
-            buttonOpenWindow.ButtonPressedEvent += ButtonOpenWindow_ButtonPressedEvent; ;
-        if (buttonCloseWindow != null)
-            buttonCloseWindow.ButtonPressedEvent += ButtonCloseWindow_ButtonPressedEvent;
+        if(_buttonOpenWindow != null)
+            _buttonOpenWindow.ButtonPressedEvent += ButtonOpenWindow_ButtonPressedEvent; ;
+        if (_buttonCloseWindow != null)
+            _buttonCloseWindow.ButtonPressedEvent += ButtonCloseWindow_ButtonPressedEvent;
     }
 
     private void OnDestroy()
     {
-        if (buttonOpenWindow != null)
-            buttonOpenWindow.ButtonPressedEvent -= ButtonOpenWindow_ButtonPressedEvent; ;
-        if (buttonCloseWindow != null)
-            buttonCloseWindow.ButtonPressedEvent -= ButtonCloseWindow_ButtonPressedEvent;
+        if (_buttonOpenWindow != null)
+            _buttonOpenWindow.ButtonPressedEvent -= ButtonOpenWindow_ButtonPressedEvent; ;
+        if (_buttonCloseWindow != null)
+            _buttonCloseWindow.ButtonPressedEvent -= ButtonCloseWindow_ButtonPressedEvent;
     }
 
     private void ButtonOpenWindow_ButtonPressedEvent(tk2dButton source)
@@ -41,13 +38,13 @@ public class Window : MonoBehaviour
 
     public virtual void Open()
     {
-        visual.SetActive(true);
+        _visual.SetActive(true);
         OnOpen?.Invoke();
     }    
 
     public void Close()
     {
-        visual.SetActive(false);
+        _visual.SetActive(false);
         OnClose?.Invoke();
     }
 }
