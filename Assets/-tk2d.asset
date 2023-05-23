@@ -718,3 +718,28 @@ MonoBehaviour:
     loadable: 0
     assetName: 
     version: 3
+  - name: BackgroundSpriteCollection 1
+    spriteCollectionGUID: 263a992756870cd40bdd3c29c656a131
+    spriteCollectionDataGUID: 04be8d6db5058d8449eaeb5a1cf6f7ae
+    spriteNames:
+    - BG_Decor
+    - Foreground
+    - Ground
+    - Middle_Decor
+    - Sky
+    spriteTextureGUIDs:
+    - 23844c6d3ef762d4d8554123c3ce1644
+    - 6451e664973a75d4e8a66f8d03eba46a
+    - c0e010dab38a107439ddf81d4cdbfec4
+    - 5034443f8fec5d747846d5957f429899
+    - 19791995a0a6c2d4d94f25620d46b87c
+    spriteTextureTimeStamps:
+    - 1551087253,66016
+    - 1551088402,33203
+    - 1550663735,55859
+    - 1551088364,36719
+    - 1550663554,15625
+    managedSpriteCollection: 0
+    loadable: 0
+    assetName: 
+    version: 3
